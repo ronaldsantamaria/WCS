@@ -52,7 +52,7 @@ mayores dependencias.
 
 # CONSUMIR EL API :+1:
 
- El proyecto tiene 2 servicios uno para el Aspirante otro para consultar las casas existentes.
+ El proyecto tiene 2 servicios uno para el aspirante otro para consultar las casas existentes.
  
  ## CASA
  
@@ -61,7 +61,8 @@ mayores dependencias.
  ## ASPIRANTES
  
  * Para **Consultar** los **aspirantes** unicamente tienes que consumir el servicio usando la siguiente metodo **GET** con la **URL** http://localhost:26296/Aspirante
- * Para **Agregar** un **aspirante** user el servicio usando la siguiente metodo **POST** URL http://localhost:26296/Aspirante
+ 
+ * Para **Agregar** un **aspirante** usar el servicio usando la siguiente metodo **POST** URL http://localhost:26296/Aspirante
    - como ejemplo usar el siguiente **Request Body** nota: No olivdar ingresar una casa valida unicamente es necesario el Id valido.
       ```
       {
@@ -76,7 +77,7 @@ mayores dependencias.
         }
       } 
     
-  * Para **Modificar** un **aspirante** user el servicio usando la siguiente metodo **PUT** con la URL http://localhost:26296/Aspirante
+  * Para **Modificar** un **aspirante** usar el servicio usando el siguiente metodo **PUT** con la URL http://localhost:26296/Aspirante
     - como ejemplo usar el siguiente **Request Body** nota: No olivdar ingresar una casa valida unicamente es necesario el Id valido, igualmente tiene que ser de un usuario registrado.
       ```
         {
