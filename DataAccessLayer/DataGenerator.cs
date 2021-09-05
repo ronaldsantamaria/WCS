@@ -16,28 +16,67 @@ namespace DataAccessLayer
             using (var context = new ApiDbContext(
                 serviceProvider.GetRequiredService<DbContextOptions<ApiDbContext>>()))
             {
-                if (context.Casas.Any())
-                {
-                    return;   
-                }
-
-                context.Casas.AddRange(
-                    new Casa
-                    {
-                        Id = 1,
-                        Nombre = "Candy Land"
-                        
-                    },
-                    new Casa
-                    {
-                        Id = 2,
-                        Nombre = "Sorry!",
-                    });
-
-                context.SaveChanges();
+                LoadCasas(context);
+                LoadAspirante(context);
             }
         }
 
+        private static void LoadCasas(ApiDbContext context)
+        {
+            if (context.Casas.Any())
+            {
+                return;
+            }
 
+            context.Casas.AddRange(
+                new Casa
+                {
+                    Id = 1,
+                    Nombre = "Gryffindor"
+
+                },
+                new Casa
+                {
+                    Id = 2,
+                    Nombre = "Hufflepuff"
+
+                },
+                new Casa
+                {
+                    Id = 3,
+                    Nombre = "Ravenclaw"
+
+                },
+                new Casa
+                {
+                    Id = 4,
+                    Nombre = "Slytherin",
+                });
+
+            context.SaveChanges();
+        }
+
+        private static void LoadAspirante(ApiDbContext context)
+        {
+            if (context.Aspirantes.Any())
+            {
+                return;
+            }
+
+            context.Aspirantes.AddRange(
+               new Aspirante
+               {
+                   Id = 0,
+                   Nombre = "Merlin",
+                   Apellido = "Magia",
+                   Identificacion = 0,
+                   Edad = 99,
+                   IdCasa = 1
+                   
+               });
+
+            context.SaveChanges();
+
+        }
     }
 }

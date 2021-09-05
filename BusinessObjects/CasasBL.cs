@@ -1,11 +1,9 @@
 ﻿using BusinessObjects.Interfaces;
-using DataAccessLayer;
+using BusinessObjets;
+using DataAccessLayer.Entities;
 using DataAccessLayer.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessObjects
 {
@@ -18,9 +16,35 @@ namespace BusinessObjects
             _ICasasDAL = CasasDAL;
         }
 
-        public void GetAllCasas()
+        public List<CasaModel> GetAllCasas()
         {
-            _ICasasDAL.GetAllCasas();
+            var allCasas = _ICasasDAL.GetAllCasas();
+            return toModel(allCasas);
+        }
+
+        public CasaModel GetCasa(int Id)
+        {
+            var allCasas = _ICasasDAL.GetAllCasas();
+            var casa = toModel(allCasas).Where(i => i.Id == Id).FirstOrDefault();
+            return casa;
+        } 
+
+
+        private List<CasaModel> toModel(List<Casa> casas)
+        {
+            var casaModel = new List<CasaModel>();
+
+            foreach (var item in casas)
+            {
+                casaModel.Add(
+                    new CasaModel()
+                    {
+                        Id = item.Id,
+                        Nombre = item.Nombre
+                    }
+                    );
+            }
+            return casaModel;
         }
     }
 }

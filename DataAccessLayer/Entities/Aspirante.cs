@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Entities
 {
-    public class Ingreso
+    public class Aspirante
     {
         public int Id { get; set; }
-        public int Nombre { get; set; }
-        public int Apellido { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
         public int Identificacion { get; set; }
         public int Edad { get; set; }
-        public Casa Casa { get; set; }
+        public int IdCasa { get; set; }
     }
 }

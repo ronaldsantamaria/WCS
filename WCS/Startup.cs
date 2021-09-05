@@ -1,3 +1,5 @@
+using BusinessLayer;
+using BusinessLayer.Interfaces;
 using BusinessObjects;
 using BusinessObjects.Interfaces;
 using DataAccessLayer;
@@ -24,11 +26,13 @@ namespace WCS
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddDbContext<ApiDbContext>(options => options.UseInMemoryDatabase(databaseName: "Magic"));
 
             services.AddTransient<ICasasDAL, CasasDAL>();
+            services.AddTransient<IAspirantesDAL, AspirantesDAL>();
+            
             services.AddTransient<ICasasBL, CasasBL>();
+            services.AddTransient<IAspirantesBL, AspirantesBL>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

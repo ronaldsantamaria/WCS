@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WCS", "WCS\WCS.csproj", "{5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{47E9548A-B3C8-4B7F-B02C-D536332B0FEE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{80414C3A-5962-4881-B67D-3BD3789F7A81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObjets", "BusinessLayer\BusinessObjets.csproj", "{80414C3A-5962-4881-B67D-3BD3789F7A81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{745C65E4-E558-4B79-AD3C-F9ECE66CD254}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessObjects\BusinessLayer.csproj", "{745C65E4-E558-4B79-AD3C-F9ECE66CD254}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

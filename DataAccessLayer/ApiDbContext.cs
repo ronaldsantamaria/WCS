@@ -10,7 +10,7 @@ namespace DataAccessLayer
         {
         }
 
-        public DbSet<Ingreso> Ingreso { get; set; }
+        public DbSet<Aspirante> Aspirantes { get; set; }
         public DbSet<Casa> Casas { get; set; }
     }
 }
