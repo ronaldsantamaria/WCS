@@ -56,14 +56,14 @@ mayores dependencias.
  
  ## CASA
  
- * Para **Consultar** las **casas** unicamente tienes que consumir el servicio usando el siguiente metodo **GET** con la **URL** http://localhost:26296/Casa
+ * Para **Consultar** las **casas** unicamente tienes que consumir el servicio usando el siguiente método **GET** con la **URL** http://localhost:26296/Casa
  
  ## ASPIRANTES
  
- * Para **Consultar** los **aspirantes** unicamente tienes que consumir el servicio usando la siguiente metodo **GET** con la **URL** http://localhost:26296/Aspirante
+ * Para **Consultar** los **aspirantes** unicamente tienes que consumir el servicio usando la siguiente método **GET** con la **URL** http://localhost:26296/Aspirante
  
  * Para **Agregar** un **aspirante** usar el servicio usando la siguiente metodo **POST** URL http://localhost:26296/Aspirante
-   - como ejemplo usar el siguiente **Request Body** nota: No olivdar ingresar una casa valida unicamente es necesario el Id valido.
+   - como ejemplo usar el siguiente **Request Body** nota: No olvidar ingresar una casa valida unicamente es necesario el Id valido.
       ```
       {
         "id": 2,
@@ -77,8 +77,8 @@ mayores dependencias.
         }
       } 
     
-  * Para **Modificar** un **aspirante** usar el servicio usando el siguiente metodo **PUT** con la URL http://localhost:26296/Aspirante
-    - como ejemplo usar el siguiente **Request Body** nota: No olivdar ingresar una casa valida unicamente es necesario el Id valido, igualmente tiene que ser de un usuario registrado.
+  * Para **Modificar** un **aspirante** usar el servicio usando el siguiente método **PUT** con la URL http://localhost:26296/Aspirante
+    - como ejemplo usar el siguiente **Request Body** nota: No olvidar ingresar una casa valida unicamente es necesario el Id valido, igualmente tiene que ser de un usuario registrado.
       ```
         {
           "id": 2,
@@ -92,6 +92,6 @@ mayores dependencias.
           }
         } 
         
- * Para **Eliminar** a un **aspirantes** unicamente tienes que consumir el servicio usando el siguiente metodo **DELETE** con la **URL** http://localhost:26296/Aspirante?Id=1  
-   - nota: El id tiene que se valido es decir de un usuario que exista.
+ * Para **Eliminar** a un **aspirantes** únicamente tienes que consumir el servicio usando el siguiente método **DELETE** con la **URL** http://localhost:26296/Aspirante?Id=1  
+   - nota: El id tiene que ser válido  es decir de un usuario que exista.
 
