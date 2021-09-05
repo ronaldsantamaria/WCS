@@ -50,4 +50,47 @@ presentada este pensada
 para ser fácilmente desplegada o ejecutada en cualquier ambiente sin
 mayores dependencias.
 
+# CONSUMIR EL API :+1:
+
+ El proyecto tiene 2 servicios uno para el Aspirante otro para consultar las casas existentes.
+ 
+ ## CASA
+ 
+ * Para **Consultar** las **casas** unicamente tienes que consumir el servicio usando la siguiente metodo **GET** con la **URL** http://localhost:26296/Casa
+ 
+ ## ASPIRANTES
+ 
+ * Para **Consultar** los **aspirantes** unicamente tienes que consumir el servicio usando la siguiente metodo **GET** con la **URL** http://localhost:26296/Aspirante
+ * Para **Agregar** un **aspirante** user el servicio usando la siguiente metodo **POST** URL http://localhost:26296/Aspirante
+   - como ejemplo usar el siguiente **Request Body** nota: No olivdar ingresar una casa valida unicamente es necesario el Id valido.
+      ```
+      {
+        "id": 2,
+        "nombre": "string",
+        "apellido": "string",
+        "identificacion": 0,
+        "edad": 0,
+        "casa": {
+          "id": 2,  
+          "nombre": "string"
+        }
+      } 
+    
+  * Para **Modificar** un **aspirante** user el servicio usando la siguiente metodo **PUT** con la URL http://localhost:26296/Aspirante
+    - como ejemplo usar el siguiente **Request Body** nota: No olivdar ingresar una casa valida unicamente es necesario el Id valido, igualmente tiene que ser de un usuario registrado.
+      ```
+        {
+          "id": 2,
+          "nombre": "string",
+          "apellido": "string",
+          "identificacion": 0,
+          "edad": 0,
+          "casa": {
+            "id": 2,  
+            "nombre": "string"
+          }
+        } 
+        
+ * Para **Eliminar** a un **aspirantes** unicamente tienes que consumir el servicio usando el siguiente metodo **DELETE** con la **URL** http://localhost:26296/Aspirante?Id=1  
+   - nota: El id tiene que se valido es decir de un usuario que exista.
 
