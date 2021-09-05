@@ -56,7 +56,7 @@ mayores dependencias.
  
  ## CASA
  
- * Para **Consultar** las **casas** unicamente tienes que consumir el servicio usando la siguiente metodo **GET** con la **URL** http://localhost:26296/Casa
+ * Para **Consultar** las **casas** unicamente tienes que consumir el servicio usando el siguiente metodo **GET** con la **URL** http://localhost:26296/Casa
  
  ## ASPIRANTES
  
